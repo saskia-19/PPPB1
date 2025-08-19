@@ -1,0 +1,70 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+    println("Hello, world!!!\n")
+    
+    val name = "Saskia" //val immutable
+    var age = 19 //var mutable
+    println("Name : $name")
+    age = 1
+    println("Age : $age")
+    
+    //coba var jadi val apakah bisa?
+    /**age = "2"
+    *println("Umur : $age")
+    */
+    //Tidak bisa karena mismatch, tipe dalam variabel age adalah string sedangkan yang diinginkan adalah integer.package
+    
+    //Conditional
+    if (age >= 50){
+        println("Tua")
+    } else if (age >= 30) {
+        println("Agak Tua")
+    } else {
+        println("Muda")
+    }
+    
+    val day = 0
+    when (day){
+        1 -> println("Senin")
+        2 -> println("Selasa")
+        else -> println("Hari lain")
+    }
+    
+    //Looping
+    for (i in 1..5){
+        println(i)
+    }
+    println("\nMemakai While")
+    var count = 1
+    while (count <= 5){
+        println(count)
+        count++
+    }
+    
+    //null safety
+    var score_a: Int? = null
+    println(score_a)
+    score_a = 100
+    println(score_a)
+    
+    //error compile, PR PPPB1 hari ini (ga dinilai)
+    /**ar score_b: Int = null
+    *intln(score_b)
+    *f score_a == null {
+        println("-")
+   *}
+    */
+    
+    //List
+    val fruits = listOf("Apel", "Mangga", "Jambu biji")
+    for (i in fruits){
+        println(i)
+    }
+    
+    val tambah_buah = mutableListOf("Apel", "Mangga", "Jambu biji")
+    tambah_buah.add("Sirsak")
+    println(tambah_buah)
+}
